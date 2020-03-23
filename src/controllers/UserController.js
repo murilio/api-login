@@ -8,7 +8,6 @@ module.exports = {
         }
         return res.status(200).json(users)
     },
-
     async store(req, res) {
         const { name, email, password } = req.body
 
@@ -20,5 +19,6 @@ module.exports = {
         user.password = undefined
         return res.status(200).json(user)
  
-    }
+    },
+    
 }
