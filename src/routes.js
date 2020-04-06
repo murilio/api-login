@@ -10,6 +10,7 @@ const routes = express.Router()
 
 // login
 routes.post('/login', AuthController.login)
+routes.post('/users', UserController.store)
 
 routes.use(authMiddleware)
 
@@ -22,7 +23,6 @@ routes.get('/products', ProductController.index)
 
 // users
 routes.get('/users', UserController.index)
-routes.post('/users', UserController.store)
 
 routes.get('/cart/:user_id/', ProductController.indexproduct)
 routes.post('/add/cart/:user_id/:product_id', ProductController.addproduct)
