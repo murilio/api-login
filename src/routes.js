@@ -11,7 +11,10 @@ const routes = express.Router()
 // login
 routes.post('/login', AuthController.login)
 
-// routes.use(authMiddleware)
+routes.use(authMiddleware)
+
+// profile
+routes.get('/profile/:user_id', AuthController.profile)
 
 // products
 routes.post('/add/products', ProductController.store)

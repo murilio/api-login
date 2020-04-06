@@ -20,5 +20,14 @@ module.exports = {
         const token = user.generateToken()
         return res.status(200).json({ user, token })
 
+    },
+
+    async profile(req, res) {
+        const { user_id } = req.params
+
+        const user = await User.findByPk(user_id)
+
+        return res.json(user)
+
     }
 }

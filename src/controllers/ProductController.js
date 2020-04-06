@@ -58,6 +58,9 @@ module.exports = {
             }
         })
 
-        return res.status(200).json(user.products)
+        const count = user.products.length
+        const products = user.products
+
+        return res.status(200).json({products, count})
     }
 }
