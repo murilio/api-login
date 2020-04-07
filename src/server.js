@@ -9,7 +9,8 @@ require('./database')
 const app = express()
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'http://localhost:3000',
+    origin: 'https://webshopsogo.herokuapp.com/'
 }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
