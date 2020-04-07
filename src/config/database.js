@@ -1,9 +1,9 @@
 module.exports = {
     dialect: 'postgres',
-    host: 'drona.db.elephantsql.com',
-    database: 'djjfzfcp',
-    username: 'djjfzfcp',
-    password: 'qR7B-XG839XmufXD9CMJVjAjsCE5fvsV',
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    username: process.env.USERNAME,
+    password: process.env.PASSWORD,
     define: {
         timestamps: true,
         underscored: true
