@@ -1,4 +1,6 @@
 const express = require('express')
+const multer = require('multer')
+const multerConfig = require('./config/multer')
 // middlewares
 const authMiddleware = require('./middlewares/auth')
 // controllers
@@ -11,6 +13,7 @@ const routes = express.Router()
 // login
 routes.post('/login', AuthController.login)
 routes.post('/users', UserController.store)
+routes.get('/', UserController.index)
 
 routes.use(authMiddleware)
 
@@ -18,7 +21,7 @@ routes.use(authMiddleware)
 routes.get('/profile/:user_id', AuthController.profile)
 
 // products
-routes.post('/add/products', ProductController.store)
+routes.post('/add/products', multer(multerConfig).single('file'), ProductController.store)
 routes.get('/products', ProductController.index)
 
 // users

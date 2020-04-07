@@ -7,6 +7,7 @@ class Product extends Model {
             description: DataTypes.STRING,
             value: DataTypes.STRING,
             category: DataTypes.STRING,
+            filename: DataTypes.STRING,
         }, {
             sequelize
         })
