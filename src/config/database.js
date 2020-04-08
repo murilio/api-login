@@ -9,3 +9,15 @@ module.exports = {
         underscored: true
     }
 }
+
+// module.exports = {
+//     dialect: 'postgres',
+//     host: 'localhost',
+//     database: 'apishop',
+//     username: 'admin',
+//     password: 'admin',
+//     define: {
+//         timestamps: true,
+//         underscored: true
+//     }
+// }

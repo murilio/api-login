@@ -27,6 +27,8 @@ module.exports = {
 
         const user = await User.findByPk(user_id)
 
+        user.password = undefined
+
         return res.json(user)
 
     }
