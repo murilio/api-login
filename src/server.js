@@ -9,7 +9,8 @@ require('./database')
 const app = express()
 
 app.use(cors({
-    origin: '*'
+    origin: 'https://webshopsogo.herokuapp.com/',
+    origin: 'http://localhost:3000'
 }))
 app.use(express.json({
     limit: '50mb'
