@@ -13,6 +13,10 @@ const CartController = require('./controllers/CartController')
 
 const routes = express.Router()
 
+routes.get('/', (req, res) => {
+    res.json({ home: 'ok' })
+})
+
 // login
 routes.post('/login', AuthController.login)
 routes.post('/users', UserController.store)
