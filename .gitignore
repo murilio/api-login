@@ -71,7 +71,6 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
-.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -110,5 +109,8 @@ dist/
 tmp/
 temp/uploads/*
 !temp/uploads/.gitkeep
+
+# database
+src/database/db.sqlite
 
 # End of https://www.gitignore.io/api/node

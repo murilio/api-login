@@ -1,22 +1,18 @@
-const uuid = require('uuid/v4')
-'use strict';
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
       id: {
         type: Sequelize.UUID,
-        defaultValue: uuid(),
         primaryKey: true,
-        allowNull: false,
+        allowNull: false
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       password: {
         type: Sequelize.STRING,
@@ -24,17 +20,16 @@ module.exports = {
       },
       created_at: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       },
       updated_at: {
         type: Sequelize.DATE,
-        allowNull: false,
-      },
-
-    });
+        allowNull: false
+      }
+    })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('users');
+    return queryInterface.dropTable('users')
   }
-};
+}
