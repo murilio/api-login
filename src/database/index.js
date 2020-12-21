@@ -7,6 +7,4 @@ const connection = new Sequelize(configDatabase)
 
 User.init(connection)
 
-User.associate(connection.models)
-
 module.exports = connection

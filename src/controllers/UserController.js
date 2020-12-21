@@ -3,9 +3,7 @@ const User = require('../models/User')
 module.exports = {
   async index (req, res) {
     const users = await User.findAll()
-    for (let i = 0; i < users.length; i++) {
-      users[i].password = undefined
-    }
+
     return res.status(200).json(users)
   },
   async store (req, res) {
@@ -16,7 +14,7 @@ module.exports = {
     }
 
     const user = await User.create({ name, email, password })
-    user.password = undefined
+
     return res.status(200).json(user)
   },
   async update (req, res) {
@@ -30,7 +28,7 @@ module.exports = {
     }
 
     await user.update({ name, email, password }, { where: { id } })
-    user.password = undefined
+
     return res.status(200).json(user)
   }
 

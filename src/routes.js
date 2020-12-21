@@ -8,7 +8,7 @@ const AuthController = require('./controllers/AuthController')
 const UserController = require('./controllers/UserController')
 
 // login
-routes.post('/login', AuthController.login)
+routes.get('/login', AuthController.login)
 routes.post('/users', UserController.store)
 
 routes.use(authMiddleware)
