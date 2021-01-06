@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
 
   const [scheme, token] = parts
 
-  if (!/^Bearer$/i.test(scheme)) {
+  if (!/^Login$/i.test(scheme)) {
     return res.status(401).json({ error: 'Token mal formatado' })
   }
 

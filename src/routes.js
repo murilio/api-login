@@ -1,7 +1,7 @@
 const routes = require('express').Router()
 
-// middlewares
-const authMiddleware = require('./middlewares/auth')
+// middleware
+const authMiddleware = require('./middleware/auth')
 
 // controllers
 const AuthController = require('./controllers/AuthController')
@@ -10,6 +10,7 @@ const UserController = require('./controllers/UserController')
 // login
 routes.get('/login', AuthController.login)
 routes.post('/users', UserController.store)
+routes.post('/loginOrCreate', AuthController.loginOrCreate)
 
 routes.use(authMiddleware)
 
