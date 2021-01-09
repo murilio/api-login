@@ -37,7 +37,7 @@ class User extends Model {
 
   generateToken () {
     return jwt.sign({ id: this.id }, configAuth.secret, {
-      expiresIn: 86400
+      expiresIn: '1h'
     })
   }
 }
